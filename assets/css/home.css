@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Landing page styles
+   Loaded by index.html on top of assets/css/styles.css.
+   Only rules for this page live here.
+   ========================================================================== */
+
+.container {
+  max-width: var(--max-width);
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+.hero {
+  margin-bottom: var(--space-6);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+.hero__lead {
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin-bottom: var(--space-4);
+  max-width: 90%;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Section
+   -------------------------------------------------------------------------- */
+.section {
+  margin-bottom: var(--space-6);
+}
+
+.section__title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.section__lead {
+  color: var(--muted);
+  margin-bottom: var(--space-3);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Project cards
+   -------------------------------------------------------------------------- */
+.projects {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.project {
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.15s ease;
+  break-inside: avoid;
+}
+
+.project:hover {
+  border-color: var(--muted-dim);
+}
+
+.project__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 0.35rem;
+}
+
+.project__desc {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 0.85rem;
+}
+
+.project__links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.project__links a {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.footer {
+  margin-top: var(--space-6);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
+  font-size: 0.875rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.footer a {
+  color: var(--muted);
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+/* ==========================================================================
+   Print — landing-page-specific overrides only.
+   Shared print base (page size, tokens, orphans/widows) is in styles.css.
+   ========================================================================== */
+@media print {
+
+  .hero__actions,
+  .footer {
+    display: none !important;
+  }
+
+  .container {
+    max-width: none;
+  }
+
+  .project {
+    background: transparent;
+    border-color: var(--print-border);
+  }
+}

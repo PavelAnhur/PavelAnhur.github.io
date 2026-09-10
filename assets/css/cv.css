@@ -1,0 +1,371 @@
+/* ==========================================================================
+   CV page styles
+   Loaded by cv.html on top of assets/css/styles.css.
+   Only rules prefixed with .cv__ live here.
+   ========================================================================== */
+
+.cv {
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+.cv__header {
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-4);
+}
+
+.cv__name {
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.cv__role {
+  font-size: 1.05rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.cv__stack {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: var(--space-2);
+}
+
+.cv__contact {
+  font-size: 0.9rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+}
+
+.cv__contact span {
+  white-space: nowrap;
+}
+
+.cv__contact .sep {
+  color: var(--muted-dim);
+}
+
+/* --------------------------------------------------------------------------
+   Sections
+   -------------------------------------------------------------------------- */
+.cv__section {
+  margin-bottom: var(--space-4);
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.cv__section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* --------------------------------------------------------------------------
+   Summary
+   -------------------------------------------------------------------------- */
+.cv__summary {
+  color: var(--fg);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Skills — definition list, two-column on wide, stacked on narrow
+   -------------------------------------------------------------------------- */
+.cv__skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .cv__skills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.cv__skill-group {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  break-inside: avoid;
+}
+
+.cv__skill-group dt {
+  font-weight: 600;
+  color: var(--fg);
+  white-space: nowrap;
+}
+
+.cv__skill-group dd {
+  color: var(--muted);
+}
+
+/* --------------------------------------------------------------------------
+   Experience
+   -------------------------------------------------------------------------- */
+.cv__job {
+  margin-bottom: var(--space-3);
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.cv__job:last-child {
+  margin-bottom: 0;
+}
+
+.cv__job-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  margin-bottom: 0.15rem;
+}
+
+.cv__job-role {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.cv__job-company {
+  color: var(--accent);
+}
+
+.cv__job-period {
+  font-size: 0.85rem;
+  color: var(--muted-dim);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.cv__job-context {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.65rem;
+  font-style: italic;
+}
+
+.cv__job-bullets {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.cv__job-bullets li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--fg);
+  break-inside: avoid;
+}
+
+.cv__job-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.cv__job-bullets strong {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Projects
+   -------------------------------------------------------------------------- */
+.cv__project {
+  margin-bottom: var(--space-2);
+  break-inside: avoid;
+}
+
+.cv__project-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 0.15rem;
+}
+
+.cv__project-meta {
+  font-size: 0.85rem;
+  color: var(--muted-dim);
+  font-family: var(--font-mono);
+  margin-bottom: 0.4rem;
+}
+
+.cv__project-meta a {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.cv__project-desc {
+  font-size: 0.94rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.cv__project-desc strong {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Education
+   -------------------------------------------------------------------------- */
+.cv__edu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  font-size: 0.95rem;
+}
+
+.cv__edu-name {
+  font-weight: 600;
+}
+
+.cv__edu-period {
+  color: var(--muted-dim);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------------------------
+   Languages
+   -------------------------------------------------------------------------- */
+.cv__languages {
+  font-size: 0.94rem;
+  color: var(--muted);
+}
+
+.cv__languages strong {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Footer (screen only)
+   -------------------------------------------------------------------------- */
+.cv__footer {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--muted-dim);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.cv__footer a {
+  color: var(--muted);
+}
+
+.cv__footer a:hover {
+  color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   Action buttons (screen only)
+   -------------------------------------------------------------------------- */
+.cv__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+
+/* ==========================================================================
+   Print — CV-specific overrides only.
+   Shared print base (page size, tokens, orphans/widows) is in styles.css.
+   ========================================================================== */
+@media print {
+  .cv {
+    max-width: none;
+  }
+
+  .cv__actions,
+  .cv__footer {
+    display: none !important;
+  }
+
+  .cv__section-title {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  .cv__job-bullets li,
+  .cv__project,
+  .cv__job,
+  .cv__section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .cv__header {
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+
+  .cv__section {
+    margin-bottom: 12pt;
+  }
+
+  .cv__job {
+    margin-bottom: 10pt;
+  }
+
+  .cv__skills {
+    gap: 3pt 14pt;
+  }
+
+  .cv__job-bullets {
+    gap: 2pt;
+  }
+
+  .cv__name,
+  .cv__job-role,
+  .cv__project-title,
+  .cv__edu-name,
+  .cv__skill-group dt,
+  .cv__job-bullets strong {
+    color: var(--print-fg);
+  }
+
+  .cv__role,
+  .cv__section-title,
+  .cv__job-company {
+    color: var(--print-accent);
+  }
+
+  .cv__job-bullets li::before {
+    background: var(--print-accent);
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

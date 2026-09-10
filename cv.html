@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pavel Anhur — CV</title>
+  <meta name="description"
+    content="CV of Pavel Anhur, QA Automation Engineer. TypeScript, Playwright, test framework design." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pavelanhur.github.io/cv.html" />
+
+  <!-- Open Graph for link previews -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Pavel Anhur — CV" />
+  <meta property="og:description" content="QA Automation Engineer · TypeScript · Playwright · Test Framework Design" />
+  <meta property="og:url" content="https://pavelanhur.github.io/cv.html" />
+
+  <!-- Shared tokens, reset, base, buttons, print base -->
+  <link rel="stylesheet" href="./assets/css/styles.css?v=1" />
+  <!-- CV-specific layout -->
+  <link rel="stylesheet" href="./assets/css/cv.css?v=1" />
+</head>
+
+<body>
+  <main class="cv">
+
+    <!-- =====================================================================
+         Screen-only actions
+         ===================================================================== -->
+    <div class="cv__actions">
+      <button type="button" class="btn btn--primary" onclick="window.print()">
+        Download as PDF
+      </button>
+      <a class="btn btn--secondary" href="./index.html">Back to home</a>
+      <a class="btn btn--secondary" href="./assets/cv/Pavel-Anhur-CV.pdf" download>
+        Static PDF
+      </a>
+    </div>
+
+    <!-- =====================================================================
+         Header
+         ===================================================================== -->
+    <header class="cv__header">
+      <h1 class="cv__name">Pavel Anhur</h1>
+      <p class="cv__role">QA Automation Engineer</p>
+      <p class="cv__stack">TypeScript · Playwright · Test Framework Design</p>
+      <p class="cv__contact">
+        <span><a href="mailto:pavelanhur@gmail.com">pavelanhur@gmail.com</a></span>
+        <span class="sep">·</span>
+        <span><a href="https://www.linkedin.com/in/pavel-anhur-1917821bb/"
+            rel="noopener">linkedin.com/in/pavel-anhur</a></span>
+        <span class="sep">·</span>
+        <span><a href="https://github.com/PavelAnhur" rel="noopener">github.com/PavelAnhur</a></span>
+        <span class="sep">·</span>
+        <span>Minsk, Belarus</span>
+      </p>
+    </header>
+
+    <!-- =====================================================================
+         Summary
+         ===================================================================== -->
+    <section class="cv__section" aria-labelledby="summary-heading">
+      <h2 class="cv__section-title" id="summary-heading">Professional Summary</h2>
+      <p class="cv__summary">
+        QA Automation Engineer with 3+ years of experience designing, building, and maintaining
+        test frameworks for complex web applications. At AlgoSec, I own the automated test
+        strategy for the security and firewall management domain — a product where a missed
+        regression has real security consequences. My main stack is TypeScript and Playwright,
+        complemented by Java and Python. I focus on test suites that are fast, stable, and
+        readable enough that developers run them locally before pushing. My portfolio includes
+        a public Playwright + TypeScript framework with 250+ tests, a published Allure report,
+        and CI running on every push.
+      </p>
+    </section>
+
+    <!-- =====================================================================
+         Skills
+         ===================================================================== -->
+    <section class="cv__section" aria-labelledby="skills-heading">
+      <h2 class="cv__section-title" id="skills-heading">Core Skills</h2>
+      <dl class="cv__skills">
+        <div class="cv__skill-group">
+          <dt>Languages</dt>
+          <dd>TypeScript, Java, Kotlin, Python, SQL</dd>
+        </div>
+        <div class="cv__skill-group">
+          <dt>Test Automation</dt>
+          <dd>Playwright, Selenium, REST Assured, JUnit, Pytest</dd>
+        </div>
+        <div class="cv__skill-group">
+          <dt>Framework Design</dt>
+          <dd>Page Object Model, custom fixtures, step decorators, data-driven tests, test tagging</dd>
+        </div>
+        <div class="cv__skill-group">
+          <dt>CI/CD</dt>
+          <dd>GitHub Actions, Jenkins, GitLab CI</dd>
+        </div>
+        <div class="cv__skill-group">
+          <dt>Reporting</dt>
+          <dd>Allure, Playwright HTML, JUnit XML</dd>
+        </div>
+        <div class="cv__skill-group">
+          <dt>API Testing</dt>
+          <dd>REST, Postman, contract testing basics</dd>
+        </div>
+        <div class="cv__skill-group">
+          <dt>Infrastructure</dt>
+          <dd>Docker, Linux, AWS (basic)</dd>
+        </div>
+        <div class="cv__skill-group">
+          <dt>Version Control</dt>
+          <dd>Git, GitHub, Bitbucket, Jira</dd>
+        </div>
+        <div class="cv__skill-group">
+          <dt>Build Tools</dt>
+          <dd>npm, Maven, Gradle</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- =====================================================================
+         Experience
+         ===================================================================== -->
+    <section class="cv__section" aria-labelledby="experience-heading">
+      <h2 class="cv__section-title" id="experience-heading">Experience</h2>
+
+      <!-- AlgoSec · Prevasio -->
+      <article class="cv__job">
+        <div class="cv__job-head">
+          <h3 class="cv__job-role">
+            Automation Engineer ·
+            <span class="cv__job-company">AlgoSec · Prevasio</span>
+          </h3>
+          <p class="cv__job-period">Jan 2023 – Aug 2024</p>
+        </div>
+        <p class="cv__job-context">
+          Prevasio is AlgoSec's cloud security product — a CSPM solution covering container
+          security, vulnerability assessment, and automated cloud network security. I joined
+          as the first and only automation engineer, alongside one architect, three developers,
+          and a small product team.
+        </p>
+        <ul class="cv__job-bullets">
+          <li>
+            <strong>Built the automation practice from zero</strong> for a greenfield CSPM product —
+            chose the stack, defined the test strategy, and wrote the first test before the UI
+            had stable locators.
+          </li>
+          <li>
+            <strong>Automated 300+ tests</strong> across UI and backend for cloud security scanning,
+            vulnerability assessment, and container posture workflows.
+          </li>
+          <li>
+            <strong>Defined the test strategy for a product with no existing test process</strong> —
+            identified the highest-risk workflows, wrote the coverage plan, and set the standard
+            for what "tested" means on the team.
+          </li>
+          <li>
+            <strong>Covered multi-cloud workflows end-to-end</strong> across AWS, Azure, and GCP —
+            credentials, scanning, findings, remediation — catching cross-provider regressions
+            that single-cloud testing would have missed.
+          </li>
+        </ul>
+      </article>
+
+      <!-- AlgoSec · Devices team -->
+      <article class="cv__job">
+        <div class="cv__job-head">
+          <h3 class="cv__job-role">
+            Automation Engineer ·
+            <span class="cv__job-company">AlgoSec · Devices</span>
+          </h3>
+          <p class="cv__job-period">Jan 2022 – Dec 2023</p>
+        </div>
+        <p class="cv__job-context">
+          AlgoSec's core security policy management product for enterprise firewalls.
+          I was on the Devices team, responsible for the firewall policy change workflow.
+        </p>
+        <ul class="cv__job-bullets">
+          <li>
+            <strong>Owned the automated test suite</strong> for the firewall policy change
+            workflow — 400+ UI and API tests covering policy creation, validation,
+            deployment, and rollback.
+          </li>
+          <li>
+            <strong>Authored test designs and reviews</strong> for the security-policy domain,
+            collaborating with developers to catch spec-level ambiguities before code was
+            written.
+          </li>
+          <li>
+            <strong>Reduced suite runtime and flakiness</strong> through targeted waits,
+            and elimination of cross-test contamination.
+          </li>
+        </ul>
+      </article>
+
+      <!-- EPAM -->
+      <article class="cv__job">
+        <div class="cv__job-head">
+          <h3 class="cv__job-role">
+            Automation Test Engineer ·
+            <span class="cv__job-company">EPAM Systems</span>
+          </h3>
+          <p class="cv__job-period">May 2021 – Dec 2021</p>
+        </div>
+        <ul class="cv__job-bullets">
+          <li>
+            Automated test cases for web services, mobile, and web applications using
+            Java and Selenium.
+          </li>
+          <li>
+            Worked alongside developers to keep automation aligned with application
+            changes; debugged failures and reported on suite health.
+          </li>
+          <li>
+            Produced detailed test result reports for stakeholders across the client and
+            delivery teams.
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- =====================================================================
+         Projects
+         ===================================================================== -->
+    <section class="cv__section" aria-labelledby="projects-heading">
+      <h2 class="cv__section-title" id="projects-heading">Projects</h2>
+
+      <article class="cv__project">
+        <h3 class="cv__project-title">
+          Playwright + TypeScript Test Framework
+        </h3>
+        <p class="cv__project-meta">
+          <a href="https://github.com/PavelAnhur/playwright-typescript-framework" rel="noopener">
+            github.com/PavelAnhur/playwright-typescript-framework
+          </a>
+        </p>
+        <p class="cv__project-desc">
+          A public reference framework for end-to-end testing. <strong>250+ tests</strong>
+          across UI and API, organized by spec, with custom fixtures, typed page objects,
+          a custom <code>@Step</code> decorator for Allure reporting, and CI that publishes
+          a live Allure report to GitHub Pages on every push.
+        </p>
+        <p class="cv__project-meta" style="margin-top: 0.4rem;">
+          Live Allure report:
+          <a href="https://pavelanhur.github.io/playwright-typescript-framework/" rel="noopener">
+            pavelanhur.github.io/playwright-typescript-framework
+          </a>
+        </p>
+      </article>
+    </section>
+
+    <!-- =====================================================================
+         Education
+         ===================================================================== -->
+    <section class="cv__section" aria-labelledby="education-heading">
+      <h2 class="cv__section-title" id="education-heading">Education</h2>
+      <div class="cv__edu">
+        <span class="cv__edu-name">Belarusian National Technical University — Minsk, Belarus</span>
+        <span class="cv__edu-period">2002 – 2008</span>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         Languages
+         ===================================================================== -->
+    <section class="cv__section" aria-labelledby="languages-heading">
+      <h2 class="cv__section-title" id="languages-heading">Languages</h2>
+      <p class="cv__languages">
+        <strong>Russian</strong> (native) ·
+        <strong>English</strong> (professional B2+) ·
+        <strong>Belarusian</strong>
+      </p>
+    </section>
+
+    <!-- =====================================================================
+         Footer (screen only)
+         ===================================================================== -->
+    <footer class="cv__footer">
+      <span>Pavel Anhur — QA Automation Engineer</span>
+      <span>
+        <a href="https://pavelanhur.github.io/">pavelanhur.github.io</a>
+        · Updated September 2026
+      </span>
+    </footer>
+
+  </main>
+</body>
+
+</html>

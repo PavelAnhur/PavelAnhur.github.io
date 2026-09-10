@@ -1,0 +1,198 @@
+/* ==========================================================================
+   Design tokens
+   ========================================================================== */
+:root {
+  /* Colors */
+  --bg: #0f172a;
+  --fg: #f8fafc;
+  --muted: #94a3b8;
+  --muted-dim: #64748b;
+  --accent: #38bdf8;
+  --border: #1e293b;
+  --surface: #1e293b;
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Layout */
+  --max-width: 780px;
+  --radius: 6px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+
+  /* Print tokens — overridden in @media print */
+  --print-bg: #ffffff;
+  --print-fg: #111827;
+  --print-muted: #4b5563;
+  --print-border: #d1d5db;
+  --print-accent: #0369a1;
+}
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.55;
+  font-size: 16px;
+  padding: var(--space-5) var(--space-3);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+a:hover {
+  border-bottom-color: currentColor;
+}
+
+/* ==========================================================================
+   Shared button styles
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.btn--primary:hover {
+  filter: brightness(1.05);
+  border-bottom-color: var(--accent);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--fg);
+  border-color: var(--border);
+}
+
+.btn--secondary:hover {
+  border-color: var(--muted);
+  border-bottom-color: var(--muted);
+}
+
+/* ==========================================================================
+   Print — A4, black on white, no chrome
+   Shared across all pages.
+   ========================================================================== */
+@page {
+  size: A4;
+  margin: 14mm 14mm 14mm 14mm;
+}
+
+@media print {
+  :root {
+    --bg: var(--print-bg);
+    --fg: var(--print-fg);
+    --muted: var(--print-muted);
+    --muted-dim: var(--print-muted);
+    --accent: var(--print-accent);
+    --border: var(--print-border);
+    --surface: #f3f4f6;
+  }
+
+  body {
+    padding: 0;
+    background: #fff;
+    color: var(--print-fg);
+    font-size: 10.5pt;
+    line-height: 1.45;
+    display: block;
+    min-height: auto;
+  }
+
+  a {
+    color: var(--print-accent);
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  p,
+  li,
+  h1,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+}
+
+/* ==========================================================================
+   Reduced motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
