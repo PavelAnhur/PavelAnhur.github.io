@@ -69,8 +69,9 @@
         regression has real security consequences. My main stack is TypeScript and Playwright,
         complemented by Java and Python. I focus on test suites that are fast, stable, and
         readable enough that developers run them locally before pushing. My portfolio includes
-        a public Playwright + TypeScript framework with 250+ tests, a published Allure report,
-        and CI running on every push.
+        a public Playwright + TypeScript framework with 250+ tests, and a four-week LLM test
+        harness covering judge calibration, RAG metrics, and streaming. Both have published
+        Allure reports.
       </p>
     </section>
 
@@ -87,6 +88,11 @@
         <div class="cv__skill-group">
           <dt>Test Automation</dt>
           <dd>Playwright, Selenium, REST Assured, JUnit, Pytest</dd>
+        </div>
+        <div class="cv__skill-group">
+          <dt>LLM Testing</dt>
+          <dd>Property-based assertions, pass-rate thresholds, adversarial inputs, LLM-as-a-judge, RAG metrics
+            (faithfulness, relevance), streaming tests</dd>
         </div>
         <div class="cv__skill-group">
           <dt>Framework Design</dt>
@@ -245,6 +251,35 @@
           Live Allure report:
           <a href="https://pavelanhur.github.io/playwright-typescript-framework/" rel="noopener">
             pavelanhur.github.io/playwright-typescript-framework
+          </a>
+        </p>
+      </article>
+
+      <article class="cv__project">
+        <h3 class="cv__project-title">
+          LLM Test Harness
+        </h3>
+        <p class="cv__project-meta">
+          <a href="https://github.com/PavelAnhur/playwright-llm-tests" rel="noopener">
+            github.com/PavelAnhur/playwright-llm-tests
+          </a>
+        </p>
+        <p class="cv__project-desc">
+          A test harness for non-deterministic LLM outputs, built over four weeks
+          and documented week-by-week. <strong>Property-based assertions</strong> replace
+          exact-match checks; <strong>pass-rate thresholds</strong> gate multi-run suites;
+          <strong>adversarial input tests</strong> cover prompt injection, role confusion,
+          and payload splitting. Includes a rubric-based <strong>LLM-as-a-judge</strong>
+          calibrated against 25 hand-labeled examples, <strong>RAG metrics</strong>
+          (faithfulness, relevance) calibrated against 19 hand-labeled examples, and
+          <strong>streaming tests</strong> for token delivery, time-to-first-token, and
+          mid-stream disconnect. Every finding and calibration round is written up,
+          including the ones where the judge disagreed with the human label.
+        </p>
+        <p class="cv__project-meta" style="margin-top: 0.4rem;">
+          Live Allure report:
+          <a href="https://pavelanhur.github.io/playwright-llm-tests/" rel="noopener">
+            pavelanhur.github.io/playwright-llm-tests
           </a>
         </p>
       </article>
