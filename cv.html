@@ -63,7 +63,7 @@
     <section class="cv__section" aria-labelledby="summary-heading">
       <h2 class="cv__section-title" id="summary-heading">Professional Summary</h2>
       <p class="cv__summary">
-        QA Automation Engineer with 3+ years of experience designing, building, and maintaining
+        QA Automation Engineer with 4 years of experience designing, building, and maintaining
         test frameworks for complex web applications. At AlgoSec, I own the automated test
         strategy for the security and firewall management domain — a product where a missed
         regression has real security consequences. My main stack is TypeScript and Playwright,
@@ -71,7 +71,9 @@
         readable enough that developers run them locally before pushing. My portfolio includes
         a public Playwright + TypeScript framework with 250+ tests, and a five-week LLM test
         harness covering judge calibration, RAG metrics — including a real retriever — and
-        streaming. Both have published Allure reports.
+        streaming. Both have published Allure reports. I also built an MCP-based AI
+        layer with four agents — requirements analysis, failure triage, adversarial review,
+        and test generation with a heal loop.
       </p>
     </section>
 
@@ -83,7 +85,7 @@
       <dl class="cv__skills">
         <div class="cv__skill-group">
           <dt>Languages</dt>
-          <dd>TypeScript, Java, Kotlin, Python, SQL</dd>
+          <dd>TypeScript, Java, Kotlin, Python, SQL (MySQL, PostgreSQL)</dd>
         </div>
         <div class="cv__skill-group">
           <dt>Test Automation</dt>
@@ -91,8 +93,9 @@
         </div>
         <div class="cv__skill-group">
           <dt>AI in QA Workflows</dt>
-          <dd>AI-assisted test generation, log analysis with LLMs, AI agents for autonomous checks,
-            prompt engineering, working with local models (llama.cpp, Ollama)</dd>
+          <dd>AI-assisted test generation, log analysis with LLMs, MCP servers and multi-agent
+            workflows (triage, adversarial review, spec generation), prompt engineering,
+            local models (llama.cpp, Ollama)</dd>
         </div>
         <div class="cv__skill-group">
           <dt>LLM Testing</dt>
@@ -102,7 +105,7 @@
         </div>
         <div class="cv__skill-group">
           <dt>Framework Design</dt>
-          <dd>Page Object Model, custom fixtures, step decorators, data-driven tests, test tagging</dd>
+          <dd>Page Object Model, custom fixtures, step decorators, data-driven tests, test tagging, visual regression (screenshot comparison)</dd>
         </div>
         <div class="cv__skill-group">
           <dt>CI/CD</dt>
@@ -114,11 +117,11 @@
         </div>
         <div class="cv__skill-group">
           <dt>API Testing</dt>
-          <dd>REST, Postman, contract testing basics</dd>
+          <dd>REST, OpenAPI/Swagger, Postman, contract testing basics</dd>
         </div>
         <div class="cv__skill-group">
           <dt>Infrastructure</dt>
-          <dd>Docker, Linux, AWS (basic)</dd>
+          <dd>Docker, Linux (incl. SSH on production), AWS (basic)</dd>
         </div>
         <div class="cv__skill-group">
           <dt>Version Control</dt>
@@ -177,6 +180,10 @@
             credentials, scanning, findings, remediation — catching cross-provider regressions
             that single-cloud testing would have missed.
           </li>
+          <li>
+            <strong>Built visual regression coverage</strong> (screenshot comparison) into the
+            suite.
+          </li>
         </ul>
       </article>
 
@@ -187,11 +194,12 @@
             Automation Engineer ·
             <span class="cv__job-company">AlgoSec · Devices</span>
           </h3>
-          <p class="cv__job-period">Jan 2022 – Dec 2023</p>
+          <p class="cv__job-period">Jan 2022 – Dec 2022</p>
         </div>
         <p class="cv__job-context">
           AlgoSec's core security policy management product for enterprise firewalls.
-          I was on the Devices team, responsible for the firewall policy change workflow.
+          I was on the Devices team, responsible for the firewall policy change workflow, until
+          moving to the Prevasio product in January 2023.
         </p>
         <ul class="cv__job-bullets">
           <li>
@@ -257,6 +265,12 @@
           across UI and API, organized by spec, with custom fixtures, typed page objects,
           a custom <code>@Step</code> decorator for Allure reporting, and CI that publishes
           a live Allure report to GitHub Pages on every push.
+        </p>
+        <p class="cv__project-desc">
+          An AI layer built on top: an MCP server and four agents — a requirements analyst,
+          a failure analyst, an adversarial judge that reviews the failure analyst's output,
+          and a spec generator that produces tests from requirements and refines them in a
+          heal loop until they pass.
         </p>
         <p class="cv__project-meta" style="margin-top: 0.4rem;">
           Live Allure report:
@@ -328,7 +342,7 @@
       <span>Pavel Anhur — QA Automation Engineer</span>
       <span>
         <a href="https://pavelanhur.github.io/">pavelanhur.github.io</a>
-        · Updated September 2026
+        · Updated October 2026
       </span>
     </footer>
 
