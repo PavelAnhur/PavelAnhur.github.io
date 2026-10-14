@@ -321,8 +321,7 @@
 
   .cv__job-bullets li,
   .cv__project,
-  .cv__job,
-  .cv__section {
+  .cv__job {
     page-break-inside: avoid;
     break-inside: avoid;
   }
@@ -367,5 +366,10 @@
     background: var(--print-accent);
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+  }
+
+  .cv__section--page-break {
+    break-before: page;
+    page-break-before: always;  /* legacy alias */
   }
 }
